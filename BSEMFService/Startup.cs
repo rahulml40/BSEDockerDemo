@@ -58,6 +58,7 @@ namespace BSEMFService
             app.UseSwaggerUI(c =>
             {
                 c.SwaggerEndpoint("/swagger/v1/swagger.json", "Catalog API V1");
+
             });
         }
     }

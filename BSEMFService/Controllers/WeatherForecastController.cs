@@ -41,6 +41,7 @@ namespace BSEMFService.Controllers
             })
             .ToArray();
         }
+        [NonAction]
         public async Task<string> generatePassCodeAsync()
         {
             var passkey = "test" + DateTime.Now.Second;
@@ -48,6 +49,8 @@ namespace BSEMFService.Controllers
             String password = await objClient.getPasswordAsync("2008101", "20081", "123456", passkey);
             return password;
         }
+       
+        [NonAction]
         public async Task<string> CreateUCC()
         {
             string pwd = await generatePassCodeAsync();
